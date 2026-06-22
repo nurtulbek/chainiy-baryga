@@ -392,7 +392,7 @@ export default function App() {
                 ))}
               </div>
 
-              {/* TG CTA */}
+              {/* TG CTA s */}
               <Reveal delay={100}>
                 <div style={{ background: "#111", border: "1px solid rgba(201,168,76,0.12)", padding: mobile ? 22 : 36, position: "relative", overflow: "hidden" }}>
                   <div style={{ position: "absolute", top: -40, right: -40, width: 150, height: 150, background: "radial-gradient(circle,rgba(139,0,0,0.2),transparent 70%)", pointerEvents: "none" }} />
