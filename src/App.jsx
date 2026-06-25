@@ -1,51 +1,51 @@
 import { useState, useEffect, useRef } from "react";
 
-const TG_LINK = "https://t.me/YOUR_CHANNEL";
+const TG_LINK = "https://t.me/stav_tea";
 
 const TEAS = [
   {
     id: 1,
-    badge: "Тёмный · Выдержанный",
-    name: "Пуэр Шу",
-    origin: "Yunnan, China · Урожай 2018",
-    desc: "Землистый, плотный, с нотами мокрого дерева. Давит на мозг мягче любого вискаря. Чайная версия пятилетней выдержки.",
-    price: "от 1 200 ₽",
-    unit: "100г",
-    seal: "🐉",
-    img: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80",
+    badge: "Шу Пуэр · Дворцовый",
+    name: "Шу Пуэр Красный бык",
+    origin: "Yunnan, China · 宫廷金芽",
+    desc: "Императорский пуэр из золотых почек — тот самый, что пили при дворе dynasties Мин и Цин. Бархатистый, с нотами молочного шоколада и лёгким дымком. Заряжает с первой чашки.",
+    price: "от 10 ₽",
+    unit: "1г",
+    seal: "🐂",
+    img: "/tea1.jpg",
   },
   {
     id: 2,
-    badge: "Улун · Скрученный",
-    name: "Те Гуань Инь",
-    origin: "Fujian, China · Весенний сбор",
-    desc: "Орхидея, сливочность, едва уловимый дым. Восемь заварок без потери аромата — мастера умеют делать чай на совесть.",
-    price: "от 900 ₽",
-    unit: "100г",
-    seal: "🍃",
-    img: "https://images.unsplash.com/photo-1600028068383-ea11a7a101f3?w=600&q=80",
+    badge: "Белый · Лунный",
+    name: "Юэ Гуан Бай",
+    origin: "Yunnan, China · 月光白",
+    desc: "«Белый лунный свет» — собирается в тени, сушится без солнца. Медово-цветочный аромат, персик, абрикос, долгое сладкое послевкусие. Редкий чай для осознанных чаепитий.",
+    price: "10 ₽",
+    unit: "1г",
+    seal: "🌙",
+    img: "/tea2.png",
   },
   {
     id: 3,
-    badge: "Белый · Редкий",
-    name: "Бай Хао Инь Чжэнь",
-    origin: "Fuding, China · Серебряные иглы",
-    desc: "Собирается два раза в год, только утром, только почки. Вкус — роса и мёд. Люди платят за это хорошие деньги. Не без причины.",
-    price: "от 2 400 ₽",
-    unit: "50г",
-    seal: "☁️",
-    img: "https://images.unsplash.com/photo-1546273703-3e44e7cdc654?w=600&q=80",
+    badge: "Шу Пуэр · Прессованный",
+    name: "Бань Чжан Шу",
+    origin: "Yunnan, China · 班章熟饼",
+    desc: "Блин из легендарного региона Бань Чжан, высота плантаций 1700м. Пряный, с ореховой нотой, ржаной коркой и сладостью сухофруктов. Выдерживает 9 честных заварок.",
+    price: "от 8 ₽",
+    unit: "1г",
+    seal: "🍂",
+    img: "/tea3.jpg",
   },
   {
     id: 4,
-    badge: "Красный · Крепкий",
-    name: "Дянь Хун",
-    origin: "Yunnan, China · Золотые типсы",
-    desc: "Мёд, карамель, тёмный шоколад. Убивает желание пить кофе раз и навсегда. Стандартный для хорошего утра.",
-    price: "от 750 ₽",
-    unit: "100г",
+    badge: "Шу Пуэр · Дракон",
+    name: "Чёрный Дракон",
+    origin: "Yunnan, China · Shu Puer Black Dragon",
+    desc: "Флагманский шу пуэр из отборного сырья со старых деревьев. Мощный, жирный, с древесно-шоколадным вкусом и стойким согревающим послевкусием. Для тех, кто знает толк.",
+    price: "от 8 ₽",
+    unit: "1г",
     seal: "🔥",
-    img: "https://images.unsplash.com/photo-1582793988951-9aed5509eb97?w=600&q=80",
+    img: "/tea4.jpg",
   },
 ];
 
@@ -220,7 +220,7 @@ export default function App() {
         <section style={{ position: "relative", width: "100%", minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", padding: `80px ${px} 80px`, overflow: "hidden" }}>
 
           {/* bg — absolutely fills the section, no gaps */}
-          <div style={{ position: "absolute", inset: 0, zIndex: 0, backgroundImage: "url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1800&q=80')", backgroundSize: "cover", backgroundPosition: "center", filter: "brightness(0.25) saturate(0.45)" }} />
+          <div style={{ position: "absolute", inset: 0, zIndex: 0, backgroundImage: "url('/hero-bg.png')", backgroundSize: "cover", backgroundPosition: "center", filter: "brightness(0.45) saturate(0.7)" }} />
           <div style={{ position: "absolute", inset: 0, zIndex: 1, background: "radial-gradient(ellipse 80% 60% at 50% 95%, rgba(139,0,0,0.3) 0%, transparent 70%)" }} />
           <div style={{ position: "absolute", inset: 0, zIndex: 1, background: "linear-gradient(to bottom, rgba(8,8,8,0.5) 0%, transparent 30%, rgba(8,8,8,0.6) 100%)" }} />
 
@@ -261,14 +261,25 @@ export default function App() {
               Лучший чай. Без лишних вопросов.
             </p>
 
-            <a
-              href="#catalog"
-              onClick={scrollToCatalog}
-              style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: mobile ? "13px 26px" : "15px 38px", background: "#8b0000", color: "#fff", textDecoration: "none", fontSize: 10, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", border: "1px solid rgba(201,168,76,0.22)" }}
-            >
-              <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
-              Смотреть товар
-            </a>
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 14 }}>
+              <a
+                href={TG_LINK}
+                target="_blank"
+                rel="noreferrer"
+                style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: mobile ? "13px 26px" : "15px 38px", background: "linear-gradient(135deg,#0088cc,#006699)", color: "#fff", textDecoration: "none", fontSize: 10, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", border: "1px solid rgba(0,136,204,0.3)" }}
+              >
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                Написать в Telegram
+              </a>
+              <a
+                href="#catalog"
+                onClick={scrollToCatalog}
+                style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: mobile ? "13px 26px" : "15px 38px", background: "#8b0000", color: "#fff", textDecoration: "none", fontSize: 10, fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase", border: "1px solid rgba(201,168,76,0.22)" }}
+              >
+                <svg width="13" height="13" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                Смотреть товар
+              </a>
+            </div>
           </div>
 
           {/* scroll hint */}
@@ -372,10 +383,9 @@ export default function App() {
               {/* contact list */}
               <div>
                 {[
-                  { icon: "✈", label: "Telegram",          value: "@chainiy_baryga",       href: TG_LINK },
-                  { icon: "📱", label: "WhatsApp / Телефон", value: "+7 900 123-45-67",       href: "tel:+79001234567" },
-                  { icon: "📍", label: "Самовывоз",          value: "Москва и Санкт-Петербург", sub: "Адрес — при заказе в Telegram" },
-                  { icon: "⏱", label: "Время работы",        value: "Пн–Вс: 10:00 — 22:00",   sub: "Срочные заявки — в любое время" },
+                  { icon: "✈", label: "Telegram",          value: "@chainiy_baryga",       href: "https://t.me/tea_stav" },
+                  { icon: "📱", label: "WhatsApp / Телефон", value: "+7 962 003-45-56",       href: "https://wa.me/message/RHWAXURA2MCYH1" },
+                  { icon: "⏱", label: "Время работы",        value: "Пн–Вс: круглосуточно",   sub: "Срочные заявки — в любое время" },
                 ].map((c, i) => (
                   <Reveal key={i} delay={i * 70}>
                     <div style={{ display: "flex", alignItems: "flex-start", gap: 18, padding: "20px 0", borderBottom: "1px solid rgba(255,255,255,0.05)", borderTop: i === 0 ? "1px solid rgba(255,255,255,0.05)" : undefined }}>
@@ -392,7 +402,7 @@ export default function App() {
                 ))}
               </div>
 
-              {/* TG CTA s */}
+              {/* TG CTA */}
               <Reveal delay={100}>
                 <div style={{ background: "#111", border: "1px solid rgba(201,168,76,0.12)", padding: mobile ? 22 : 36, position: "relative", overflow: "hidden" }}>
                   <div style={{ position: "absolute", top: -40, right: -40, width: 150, height: 150, background: "radial-gradient(circle,rgba(139,0,0,0.2),transparent 70%)", pointerEvents: "none" }} />
@@ -404,7 +414,7 @@ export default function App() {
                     Там выкладываем свежие поступления, фото партий, отзывы постоянников и иногда — закрытые предложения для своих. Вступай.
                   </p>
                   <a
-                    href={TG_LINK}
+                    href="https://t.me/tea_stav"
                     target="_blank"
                     rel="noreferrer"
                     style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: mobile ? "12px 20px" : "14px 26px", background: "linear-gradient(135deg,#0088cc,#006699)", color: "#fff", textDecoration: "none", fontSize: 10, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }}
